@@ -4,19 +4,32 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Rigidbody2D rb2d;
+    public float moveSpeed = 5.0f; // Adjust this to set the movement speed.
 
-    public int health = 100;
-    public int speed = 50;
+    private Vector3 movement;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        movement = new Vector3(horizontalInput, verticalInput, 0).normalized; // Normalize the vector to ensure consistent speed in all directions.
+    }
+
+    void FixedUpdate()
+    {
+        MoveCharacter();
+    }
+
+    void MoveCharacter()
+    {
+        // Get the current position
+        Vector3 currentPosition = transform.position;
+
+        // Calculate the new position
+        Vector3 newPosition = currentPosition + movement * moveSpeed * Time.fixedDeltaTime;
+
+        // Move the character
+        transform.position = newPosition;
     }
 }
