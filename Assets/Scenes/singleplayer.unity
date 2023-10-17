@@ -123,6 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &597110640
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +254,8 @@ Transform:
   - {fileID: 597110641}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &2079099465
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,4 +353,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2079099468}
+<<<<<<< Updated upstream
   - {fileID: 1638393183}
+=======
+>>>>>>> Stashed changes
